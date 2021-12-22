@@ -35,49 +35,52 @@ that information
      currently no user Authentication has been implemented.
 
 ### APIs
->For scope of this Project, we have following APIs
+For scope of this Project, we have following APIs
 1. CRUD APIs for all master data, which includes following entities/tables
-a. Company
+>>a. Company
 >b. Topics
 >>c. Subtopics
->>>d. Tags
->e.User
+>d. Tags
+>>e.User
 2. /POST Questions
->a. Input
+a. Input
 >>i. Question Text - Mandatory. Min length 50 characters, Max length 500
 characters
 >>ii. CompanyId - Optional
 >iii. SubtopicId - Mandatory
 >>iv. Tags - List of tags - Optional
 >v. User ID - the Id of user submitting the question
->>b. Output
+b. Output
 >i. ID - ID of question saved in database
 >>3. /POST Answers
->a. Input
+a. Input
 >>i. Question ID - Question for which answer is being submitted
 >ii. Answer Text - Mandatory. Min length 50 characters, Max length 500
 characters
 >>iii. User ID- the ID of user submitting answer
->b. Output
+b. Output
 >>i. ID - ID of answer saved in database
 
 4. /POST Comments (Post comments for a given answer)
->a. Input
+a. Input
 >>ii. UserID - User posting the answer - Mandatory
 >>iii. Comment Text - Comment Text - Mandatory. Min length 50 characters,
 Max length 500 characters
->b. Output
+b. Output
 >>i. ID - ID of comment saved in database
 
 5. /POST Question_likes (For a user to like a given question)
+a. Input
 >i. QuestionID - Question which is being liked
 >>ii. UserId - ID of user liking the question
->6. /POST Answer_likes (For a user liking the given answer)
->>a. Input
+6. /POST Answer_likes (For a user liking the given answer)
+a. Input
+>>i. AnswerID - Answer which is being liked
 >ii. UserId - ID of user liking the answer
->>7. /GET Filter_Questions - Returns list of questions based on the combination of following
+
+7. /GET Filter_Questions - Returns list of questions based on the combination of following
 query parameters
->a. Input
+a. Input
 >>i. Companies - List of companies - Optional
 >ii. Subtopics - List of subtopics - Optional
 >>iii. Likes - Questions with more votes than votes sent as input - Optional
