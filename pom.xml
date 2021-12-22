@@ -13,9 +13,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>QAplatform</name>
 	<description>Spring Boot Question answer platform API</description>
-	<properties>
-		<java.version>17</java.version>
-	</properties>
+		<properties>
+	    <java.version>11</java.version>
+	       </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,9 +33,10 @@
 
 
 		<dependency>
-        <groupId>org.postgresql</groupId>
-        <artifactId>postgresql</artifactId>
-    </dependency>
+   <groupId>org.postgresql</groupId>
+   <artifactId>postgresql</artifactId>
+   <version>9.4-1206-jdbc42</version>
+</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
