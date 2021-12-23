@@ -162,7 +162,13 @@ for(Tags tg:tags){
   getQuestion.setTags(tagstring);
 
   //setting topics
-getQuestion.setTopic(question.getTopic().getTopic_name());
+ if(question.getTopic()==null){
+    getQuestion.setTopic("Topic Not Mapped in database");
+
+  }
+  else {
+    getQuestion.setTopic(question.getTopic().getTopic_name());
+  }
 
 
 
